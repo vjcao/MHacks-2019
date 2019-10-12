@@ -9,7 +9,7 @@ set -Eeuo pipefail
 
 # Set environmental variables
 export FLASK_DEBUG=True
-export FLASK_APP=insta485
+export FLASK_APP=depict
 export INSTA485_SETTINGS=config.py
 
 # Run server on port 8000
