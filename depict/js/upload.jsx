@@ -7,30 +7,21 @@ class Upload extends React.Component {
         // Initialize mutable state
         super(props);
         this.state = { upload: "nopic" };
+        this.handleChange = this.handleChange.bind(this)
     }
-
-    componentDidMount() {
-        // Call REST API to
-        fetch(this.props.url, { credentials: 'same-origin' })
-        .then((response) => {
-            if (!response.ok) throw Error(response.statusText);
-            return response.json();
-        })
-        .then((data) => {
-            this.setState({
-                upload: "picture.jpg"
-            });
-        })
-        .catch(error => console.log(error));
+    handleChange(event) {
+      this.setState({
+        upload: URL.createObjectURL(event.target.files[0])
+      })
+      fetch(this.props.url, { credentials: 'same-origin', method: 'POST', body: this.state.upload })
     }
-
     render() {
-        // Render something
-        return (
-            <div className="upload">
-            <p>{ this.state.upload }</p>
-            </div>
-        );
+      return (
+        <div>
+          <input type="file" onChange={this.handleChange}/>
+          <img src={this.state.upload}/>
+        </div>
+      );
     }
 }
 

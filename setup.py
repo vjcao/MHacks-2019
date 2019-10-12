@@ -19,5 +19,6 @@ setup(
         'Flask==1.1.1',
         'nodeenv==1.3.3',
         'requests==2.22.0',
+        'gcloud'
     ],
 )
