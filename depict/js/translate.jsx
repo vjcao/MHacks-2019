@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
+const languages = [
+        {}
+]
+
 class Translate extends React.Component {
+
+    
 
     constructor(props) {
         // Initialize mutable state
