@@ -4,7 +4,7 @@ import base64
 from google.cloud import vision
 import io
 
-@depict.app.route('/api/v1/', methods=['GET', 'POST'])
+@depict.app.route('/api/v1/vision', methods=['GET', 'POST'])
 def depictapi():    
     # if flask.request.method == "POST":
 
@@ -23,14 +23,27 @@ def depictapi():
         # return flask.jsonify(res)
     # else:
         # return flask.jsonify()
-    vision_client = vision.Client()
-    file_name = "demo-img.jpg"
-    with io.open(file_name, 'rb') as image_file:
-        content = image_file.read()
-        image = vision_client.image(content = content)
-    labels = image.detect_labels()
-    print(labels)
-    return flask.jsonify(**labels)
+    if flask.request.method == "POST":
+        if 'file'
+        vision_client = vision.ImageAnnotatorClient()
+        file_name = "demo-img.jpg"
+        with io.open(file_name, 'rb') as image_file:
+            content = image_file.read()
+            image = vision_client.image(content = content)
+        labels = image.detect_labels()
+        print(labels)
+        return flask.jsonify(**labels)
+
+@depict.app.route('/api/v1/translate')
+def translate():
+    
+
+@depict.app.route('/api/v1/upload', methods=['GET', 'POST'])
+def upload():
+    if flask.request.method == "POST":
+        if 'file' is not in flask.request.file:
+
+        if not upload or not allowed_file(upload)
 
 
 def allowed_file(filename):
