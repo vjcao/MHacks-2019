@@ -10,7 +10,7 @@ class Upload extends React.Component {
     }
 
     componentDidMount() {
-        // Call REST API to get number of likes
+        // Call REST API to
         fetch(this.props.url, { credentials: 'same-origin' })
         .then((response) => {
             if (!response.ok) throw Error(response.statusText);
@@ -25,7 +25,7 @@ class Upload extends React.Component {
     }
 
     render() {
-        // Render number of likes
+        // Render something
         return (
             <div className="upload">
             <p>{ this.state.upload }</p>

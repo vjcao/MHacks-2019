@@ -1,4 +1,4 @@
 """depict REST API."""
 
-from depict.api.translate import 
-from depict.api.upload import
+#from depict.api.translate import 
+from depict.api.upload import depictapi

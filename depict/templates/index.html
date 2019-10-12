@@ -87,7 +87,10 @@
     <input type="radio" name="language"> </input>
     <input type="submit" name="addfile" value="addfile"></input> 
   </form>
-  <div id="reactEntry"></div>
-  <script src="js/scripts.js"></script>
+  <div id="reactEntry">
+    Loading ...
+  </div>
+  <!-- Load JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bundle.js') }}"></script>
 </body>
 </html>

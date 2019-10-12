@@ -1,2 +1,2 @@
 """Views"""
-from depict.views import show_index
+from depict.views.index import show_index
