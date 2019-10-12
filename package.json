@@ -1,8 +1,8 @@
 {
-  "name": "insta485",
+  "name": "depict",
   "version": "0.1.0",
-  "description": "insta485 front end",
-  "main": "insta485/js/main.jsx",
+  "description": "depict front end",
+  "main": "depict/js/main.jsx",
   "author": "awdeorio",
   "license": "MIT",
   "repository": {},
