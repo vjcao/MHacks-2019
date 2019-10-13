@@ -122,6 +122,7 @@ class Translate extends React.Component {
         this.state = { english: "none", lang: "Afrikaans", translated: "none"};
         this.handleLang = this.handleLang.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleWord = this.handleWord.bind(this)
     }
 
     // componentDidMount() {
@@ -144,6 +145,12 @@ class Translate extends React.Component {
         console.log(event.target.value)
         this.setState({lang: event.target.value})
     }
+
+    handleWord(event) {
+        console.log(event.target.value)
+        this.setState({word: event.target.value})
+    }
+
     handleSubmit() {
         this.setState({english: "hello"})
         let formData = new FormData()

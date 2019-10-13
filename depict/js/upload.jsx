@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Translate from './translate'
 
 class Upload extends React.Component {
 
@@ -46,7 +47,7 @@ class Upload extends React.Component {
               <div id="button-bar">
                 <input type="file" onChange={this.handleChange}/>
               </div>
-              <div id="word-list">
+              <div id="word-list" onChange={Translate.handleWord}>
                 {this.state.words.map((el) => (<label for={el}><input type="radio" value={el}/>{el}</label>))}
               </div>
             </div>
