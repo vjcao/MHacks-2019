@@ -1,9 +1,7 @@
-*.db
 var/
 node_modules/
 cookies.txt
 bundle.js
-session.json
 
 # Python
 *.pyc
@@ -19,7 +17,6 @@ venv3/
 # JavaScript
 bundle.js
 *node_modules*
-files_for_autograder_io/
 */var/*
 
 # Virtual Machines
