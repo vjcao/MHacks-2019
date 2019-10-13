@@ -28,6 +28,7 @@ def get_translate():
         if 'word' in flask.request.form and 'lang' in flask.request.form:
             text = flask.request.form['word']
             target = flask.request.form['lang']
+            print(text)
 
             translate_client = translate.Client()
             if isinstance(text, six.binary_type):
