@@ -1879,7 +1879,7 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	input[type="file"],
+	
 	button,
 	.button {
 		-moz-appearance: none;
@@ -1907,7 +1907,6 @@
 		input[type="submit"].icon,
 		input[type="reset"].icon,
 		input[type="button"].icon,
-		input[type="file"].icon,
 		button.icon,
 		.button.icon {
 			padding-left: 1.35rem;
@@ -1916,7 +1915,6 @@
 			input[type="submit"].icon:before,
 			input[type="reset"].icon:before,
 			input[type="button"].icon:before,
-			input[type="file"].icon::before,
 			button.icon:before,
 			.button.icon:before {
 				margin-right: 0.5rem;
@@ -1925,7 +1923,6 @@
 		input[type="submit"].fit,
 		input[type="reset"].fit,
 		input[type="button"].fit,
-		input[type="file"].fit,
 		button.fit,
 		.button.fit {
 			display: block;
@@ -1936,7 +1933,6 @@
 		input[type="submit"].small,
 		input[type="reset"].small,
 		input[type="button"].small,
-		input[type="file"].small,
 		button.small,
 		.button.small {
 			font-size: 0.8rem;
@@ -1945,7 +1941,6 @@
 		input[type="submit"].big,
 		input[type="reset"].big,
 		input[type="button"].big,
-		input[type="file"].big,
 		button.big,
 		.button.big {
 			font-size: 1.35rem;
@@ -1956,8 +1951,6 @@
 		input[type="reset"]:disabled,
 		input[type="button"].disabled,
 		input[type="button"]:disabled,
-		input[type="file"].disabled,
-		input[type="file"]:disabled,
 		button.disabled,
 		button:disabled,
 		.button.disabled,
@@ -1985,7 +1978,7 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	input[type="file"],
+	
 	button,
 	.button {
 		background-color: #f2f2f2;
@@ -1995,7 +1988,6 @@
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
-		input[type="file"]:hover,
 		button:hover,
 		.button:hover {
 			background-color: white;
@@ -2004,7 +1996,6 @@
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
-		input[type="file"]:active,
 		button:active,
 		.button:active {
 			background-color: #e5e5e5;
@@ -2013,7 +2004,6 @@
 		input[type="submit"].alt,
 		input[type="reset"].alt,
 		input[type="button"].alt,
-		input[type="file"].alt,
 		button.alt,
 		.button.alt {
 			background-color: transparent;
@@ -2024,7 +2014,6 @@
 			input[type="submit"].alt:hover,
 			input[type="reset"].alt:hover,
 			input[type="button"].alt:hover,
-			input[type="file"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
 				background-color: rgba(144, 144, 144, 0.075);
@@ -2033,7 +2022,6 @@
 			input[type="submit"].alt:active,
 			input[type="reset"].alt:active,
 			input[type="button"].alt:active,
-			input[type="file"].alt:active,
 			button.alt:active,
 			.button.alt:active {
 				background-color: rgba(144, 144, 144, 0.2);
@@ -2042,7 +2030,6 @@
 			input[type="submit"].alt.icon:before,
 			input[type="reset"].alt.icon:before,
 			input[type="button"].alt.icon:before,
-			input[type="file"].alt.icon:before,
 			button.alt.icon:before,
 			.button.alt.icon:before {
 				color: #bbb;
@@ -2051,7 +2038,6 @@
 		input[type="submit"].special,
 		input[type="reset"].special,
 		input[type="button"].special,
-		input[type="file"].special,
 		button.special,
 		.button.special {
 			background-color: #8a4680;
@@ -2061,7 +2047,6 @@
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
-			input[type="file"].special:hover,
 			button.special:hover,
 			.button.special:hover {
 				background-color: #9b4f90;
@@ -2070,7 +2055,6 @@
 			input[type="submit"].special:active,
 			input[type="reset"].special:active,
 			input[type="button"].special:active,
-			input[type="file"].special:active,
 			button.special:active,
 			.button.special:active {
 				background-color: #793d70;
@@ -2739,7 +2723,6 @@
 			.wrapper.style1 input[type="submit"],
 			.wrapper.style1 input[type="reset"],
 			.wrapper.style1 input[type="button"],
-			.wrapper.style1 input[type="file"],
 			.wrapper.style1 button,
 			.wrapper.style1 .button {
 				background-color: #f2f2f2;
@@ -2749,7 +2732,6 @@
 				.wrapper.style1 input[type="submit"]:hover,
 				.wrapper.style1 input[type="reset"]:hover,
 				.wrapper.style1 input[type="button"]:hover,
-				.wrapper.style1 input[type="file"]:hover,
 				.wrapper.style1 button:hover,
 				.wrapper.style1 .button:hover {
 					background-color: white;
@@ -2758,7 +2740,6 @@
 				.wrapper.style1 input[type="submit"]:active,
 				.wrapper.style1 input[type="reset"]:active,
 				.wrapper.style1 input[type="button"]:active,
-				.wrapper.style1 input[type="file"]:active,
 				.wrapper.style1 button:active,
 				.wrapper.style1 .button:active {
 					background-color: #e5e5e5;
@@ -2767,7 +2748,6 @@
 				.wrapper.style1 input[type="submit"].alt,
 				.wrapper.style1 input[type="reset"].alt,
 				.wrapper.style1 input[type="button"].alt,
-				.wrapper.style1 input[type="file"].alt,
 				.wrapper.style1 button.alt,
 				.wrapper.style1 .button.alt {
 					background-color: transparent;
@@ -2778,7 +2758,6 @@
 					.wrapper.style1 input[type="submit"].alt:hover,
 					.wrapper.style1 input[type="reset"].alt:hover,
 					.wrapper.style1 input[type="button"].alt:hover,
-					.wrapper.style1 input[type="file"].alt:hover,
 					.wrapper.style1 button.alt:hover,
 					.wrapper.style1 .button.alt:hover {
 						background-color: rgba(255, 255, 255, 0.075);
@@ -2787,7 +2766,6 @@
 					.wrapper.style1 input[type="submit"].alt:active,
 					.wrapper.style1 input[type="reset"].alt:active,
 					.wrapper.style1 input[type="button"].alt:active,
-					.wrapper.style1 input[type="file"].alt:active,
 					.wrapper.style1 button.alt:active,
 					.wrapper.style1 .button.alt:active {
 						background-color: rgba(255, 255, 255, 0.2);
@@ -2796,7 +2774,6 @@
 					.wrapper.style1 input[type="submit"].alt.icon:before,
 					.wrapper.style1 input[type="reset"].alt.icon:before,
 					.wrapper.style1 input[type="button"].alt.icon:before,
-					.wrapper.style1 input[type="file"].alt.icon:before,
 					.wrapper.style1 button.alt.icon:before,
 					.wrapper.style1 .button.alt.icon:before {
 						color: #d0b5cc;
@@ -2805,7 +2782,6 @@
 				.wrapper.style1 input[type="submit"].special,
 				.wrapper.style1 input[type="reset"].special,
 				.wrapper.style1 input[type="button"].special,
-				.wrapper.style1 input[type="file"].special,
 				.wrapper.style1 button.special,
 				.wrapper.style1 .button.special {
 					background-color: #ffffff;
@@ -2955,7 +2931,6 @@
 			.wrapper.style2 input[type="submit"],
 			.wrapper.style2 input[type="reset"],
 			.wrapper.style2 input[type="button"],
-			.wrapper.style2 input[type="file"],
 			.wrapper.style2 button,
 			.wrapper.style2 .button {
 				background-color: #000;
@@ -2965,7 +2940,6 @@
 				.wrapper.style2 input[type="submit"].alt,
 				.wrapper.style2 input[type="reset"].alt,
 				.wrapper.style2 input[type="button"].alt,
-				.wrapper.style2 input[type="file"].alt,
 				.wrapper.style2 button.alt,
 				.wrapper.style2 .button.alt {
 					background-color: transparent;
@@ -2976,7 +2950,6 @@
 					.wrapper.style2 input[type="submit"].alt:hover,
 					.wrapper.style2 input[type="reset"].alt:hover,
 					.wrapper.style2 input[type="button"].alt:hover,
-					.wrapper.style2 input[type="file"].alt:hover,
 					.wrapper.style2 button.alt:hover,
 					.wrapper.style2 .button.alt:hover {
 						background-color: rgba(0, 0, 0, 0.075);
@@ -2985,7 +2958,6 @@
 					.wrapper.style2 input[type="submit"].alt:active,
 					.wrapper.style2 input[type="reset"].alt:active,
 					.wrapper.style2 input[type="button"].alt:active,
-					.wrapper.style2 input[type="file"].alt:active,
 					.wrapper.style2 button.alt:active,
 					.wrapper.style2 .button.alt:active {
 						background-color: rgba(0, 0, 0, 0.2);
@@ -2994,7 +2966,6 @@
 					.wrapper.style2 input[type="submit"].alt.icon:before,
 					.wrapper.style2 input[type="reset"].alt.icon:before,
 					.wrapper.style2 input[type="button"].alt.icon:before,
-					.wrapper.style2 input[type="file"].alt.icon:before,
 					.wrapper.style2 button.alt.icon:before,
 					.wrapper.style2 .button.alt.icon:before {
 						color: #999999;
@@ -3003,7 +2974,6 @@
 				.wrapper.style2 input[type="submit"].special,
 				.wrapper.style2 input[type="reset"].special,
 				.wrapper.style2 input[type="button"].special,
-				.wrapper.style2 input[type="file"].special,
 				.wrapper.style2 button.special,
 				.wrapper.style2 .button.special {
 					background-color: #8a4680;
@@ -3013,7 +2983,6 @@
 					.wrapper.style2 input[type="submit"].special:hover,
 					.wrapper.style2 input[type="reset"].special:hover,
 					.wrapper.style2 input[type="button"].special:hover,
-					.wrapper.style2 input[type="file"].special:hover,
 					.wrapper.style2 button.special:hover,
 					.wrapper.style2 .button.special:hover {
 						background-color: #9b4f90;
@@ -3022,7 +2991,6 @@
 					.wrapper.style2 input[type="submit"].special:active,
 					.wrapper.style2 input[type="reset"].special:active,
 					.wrapper.style2 input[type="button"].special:active,
-					.wrapper.style2 input[type="file"].special:active,
 					.wrapper.style2 button.special:active,
 					.wrapper.style2 .button.special:active {
 						background-color: #793d70;
@@ -3176,7 +3144,6 @@
 			.wrapper.style3 input[type="submit"],
 			.wrapper.style3 input[type="reset"],
 			.wrapper.style3 input[type="button"],
-			.wrapper.style3 input[type="file"],
 			.wrapper.style3 button,
 			.wrapper.style3 .button {
 				background-color: #f2f2f2;
@@ -3186,7 +3153,6 @@
 				.wrapper.style3 input[type="submit"]:hover,
 				.wrapper.style3 input[type="reset"]:hover,
 				.wrapper.style3 input[type="button"]:hover,
-				.wrapper.style3 input[type="file"]:hover,
 				.wrapper.style3 button:hover,
 				.wrapper.style3 .button:hover {
 					background-color: white;
@@ -3195,7 +3161,6 @@
 				.wrapper.style3 input[type="submit"]:active,
 				.wrapper.style3 input[type="reset"]:active,
 				.wrapper.style3 input[type="button"]:active,
-				.wrapper.style3 input[type="file"]:active,
 				.wrapper.style3 button:active,
 				.wrapper.style3 .button:active {
 					background-color: #e5e5e5;
@@ -3204,7 +3169,6 @@
 				.wrapper.style3 input[type="submit"].alt,
 				.wrapper.style3 input[type="reset"].alt,
 				.wrapper.style3 input[type="button"].alt,
-				.wrapper.style3 input[type="file"].alt,
 				.wrapper.style3 button.alt,
 				.wrapper.style3 .button.alt {
 					background-color: transparent;
@@ -3215,7 +3179,6 @@
 					.wrapper.style3 input[type="submit"].alt:hover,
 					.wrapper.style3 input[type="reset"].alt:hover,
 					.wrapper.style3 input[type="button"].alt:hover,
-					.wrapper.style3 input[type="file"].alt:hover,
 					.wrapper.style3 button.alt:hover,
 					.wrapper.style3 .button.alt:hover {
 						background-color: rgba(255, 255, 255, 0.075);
@@ -3224,7 +3187,6 @@
 					.wrapper.style3 input[type="submit"].alt:active,
 					.wrapper.style3 input[type="reset"].alt:active,
 					.wrapper.style3 input[type="button"].alt:active,
-					.wrapper.style3 input[type="file"].alt:active,
 					.wrapper.style3 button.alt:active,
 					.wrapper.style3 .button.alt:active {
 						background-color: rgba(255, 255, 255, 0.2);
@@ -3233,7 +3195,6 @@
 					.wrapper.style3 input[type="submit"].alt.icon:before,
 					.wrapper.style3 input[type="reset"].alt.icon:before,
 					.wrapper.style3 input[type="button"].alt.icon:before,
-					.wrapper.style3 input[type="file"].alt.icon:before,
 					.wrapper.style3 button.alt.icon:before,
 					.wrapper.style3 .button.alt.icon:before {
 						color: #999999;
@@ -3242,7 +3203,6 @@
 				.wrapper.style3 input[type="submit"].special,
 				.wrapper.style3 input[type="reset"].special,
 				.wrapper.style3 input[type="button"].special,
-				.wrapper.style3 input[type="file"].special,
 				.wrapper.style3 button.special,
 				.wrapper.style3 .button.special {
 					background-color: #8a4680;
@@ -3252,7 +3212,6 @@
 					.wrapper.style3 input[type="submit"].special:hover,
 					.wrapper.style3 input[type="reset"].special:hover,
 					.wrapper.style3 input[type="button"].special:hover,
-					.wrapper.style3 input[type="file"].special:hover,
 					.wrapper.style3 button.special:hover,
 					.wrapper.style3 .button.special:hover {
 						background-color: #9b4f90;
@@ -3261,7 +3220,6 @@
 					.wrapper.style3 input[type="submit"].special:active,
 					.wrapper.style3 input[type="reset"].special:active,
 					.wrapper.style3 input[type="button"].special:active,
-					.wrapper.style3 input[type="file"].special:active,
 					.wrapper.style3 button.special:active,
 					.wrapper.style3 .button.special:active {
 						background-color: #793d70;
