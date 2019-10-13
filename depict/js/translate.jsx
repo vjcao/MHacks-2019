@@ -119,7 +119,7 @@ class Translate extends React.Component {
     constructor(props) {
         // Initialize mutable state
         super(props);
-        this.state = { english: "none", lang: "none", translated: "none"};
+        this.state = { english: "none", lang: "Afrikaans", translated: "none"};
     }
 
     // componentDidMount() {
@@ -139,6 +139,7 @@ class Translate extends React.Component {
     // }
 
     handleLang(event) {
+        console.log(event.target.value)
         this.setState({lang: event.target.value})
     }
     handleSubmit() {
@@ -161,7 +162,7 @@ class Translate extends React.Component {
                 <p>{ this.state.english }</p>
                 <p>{ this.state.lang }</p>
                 <p>{ this.state.translated }</p>
-                <select id='language' onChange={this.handleLang}>
+                <select id='language' value={this.state.lang} onChange={this.handleLang}>
                     {
                         languages.map((el,i) => (<option key={i} value={el.code}>{el.label}</option>))
                     }
