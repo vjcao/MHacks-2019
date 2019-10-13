@@ -8,7 +8,6 @@ class App extends React.Component {
     constructor(props) {
         // Initialize mutable state
         super(props);
-        this.state = {};
     }
 
     render() {

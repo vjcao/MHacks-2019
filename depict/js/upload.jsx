@@ -17,6 +17,10 @@ class Upload extends React.Component {
         let formData = new FormData();
         formData.append("file", event.target.files[0]);
         fetch(this.props.url, { credentials: 'same-origin', method: 'POST', body: formData })
+        .then((response) => {
+            if (!response.ok) throw Error(response.statusText);
+            return response.json();
+        })
         .then(response =>  response.json())
         .then(response => {
             console.log(response);
@@ -24,6 +28,7 @@ class Upload extends React.Component {
                words: response.words
             })
         })
+        .error(error => console.log(error))
     }
     /*
     function selectWords() {

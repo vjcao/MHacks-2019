@@ -127,10 +127,10 @@ class Translate extends React.Component {
     // componentDidMount() {
     //     // Call REST API to get number of likes
     //     fetch(this.props.url, { credentials: 'same-origin' })
-    //     .then((response) => {
-    //         if (!response.ok) throw Error(response.statusText);
-    //         return response.json();
-    //     })
+        // .then((response) => {
+        //     if (!response.ok) throw Error(response.statusText);
+        //     return response.json();
+        // })
     //     .then((data) => {
     //         this.setState({
     //             english: "original",
@@ -150,11 +150,16 @@ class Translate extends React.Component {
         formData.append("word", this.state.english)
         formData.append("lang", this.state.lang)
         fetch(this.props.url, { credentials: 'same-origin', method: 'POST', body: formData })
+        .then((response) => {
+            if (!response.ok) throw Error(response.statusText);
+            return response.json();
+        })
         .then(response => response.json())
         .then(response => {
-            console.log(response)
+            console.log(response);
             this.setState({translated: response.word})
         })
+        .catch(error => console.log(error))
     }
     
     render() {
