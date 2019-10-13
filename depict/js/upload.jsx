@@ -34,11 +34,15 @@ class Upload extends React.Component {
     */
     render() {
         return (
-            <div id="upload">
+          <div id="upload-container">
+            <div id="upload-stuff">
                 <input type="file" onChange={this.handleChange}/>
                 <img src={this.state.upload}/>
+            </div>
+            <div id="wordlist">
                 <p>{this.state.words}</p>
             </div>
+          </div>
         );
     }
 }
@@ -46,5 +50,5 @@ class Upload extends React.Component {
 Upload.propTypes = {
     url: PropTypes.string.isRequired,
 };
-  
+
 export default Upload;
