@@ -36,8 +36,8 @@ def get_translate():
             result = translate_client.translate(
                 text, target_language=target)
     print(result)
-    context = {"word":result.translatedText}
-    return flask.jsonify()
+    context = {"word": result['translatedText']}
+    return flask.jsonify(**context)
 
 def compute_filename(filename):
     """Compute file name."""
