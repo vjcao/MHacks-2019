@@ -1,11 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Checkbox from '@material-ui/core/Checkbox'
-// import FormControl from '@material-ui/core/FormControl'
-// import FormGroup from '@material-ui/core/FormGroup'
-// import FormControlLabel from '@material-ui/core/FormControlLabel'
-// import Select from '@material-ui/core/Select'
-// import MenuItem from '@material-ui/core/MenuItem'
+import Upload from './upload'
 
 const languages = [
     {label: 'Afrikaans', code: 'af'},
@@ -170,16 +165,21 @@ class Translate extends React.Component {
     render() {
         // Render number of likes
         return (
+            <div>
+            <Upload url="/api/v1/vision" handleWord={this.handleWord}/>
             <div id="translate">
-                <p>{ this.state.english }</p>
-                <p>{ this.state.lang }</p>
-                <p>{ this.state.translated }</p>
                 <select id='language' defaultValue={this.state.lang} onChange={this.handleLang}>
                     {
                         languages.map((el,i) => (<option key={i} value={el.code}>{el.label}</option>))
                     }
                 </select>
-                <input type="submit" onClick={this.handleSubmit}/>
+                <input id="submit" type="submit" onClick={this.handleSubmit}/>
+                <div id="results-bar">
+                    {
+                        this.state.english === 'none' || this.state.translated === 'none' ? <h1></h1> : <h1 id="results">{ this.state.english } = { this.state.translated } </h1>
+                    }
+                </div>
+            </div>
             </div>
         );
     }
