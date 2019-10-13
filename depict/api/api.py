@@ -22,30 +22,20 @@ def depictapi():
         context = {"words":context_list}
         return flask.jsonify(**context)
 
-@depict.app.route('/api/v1/translate', methods = ["GET"])
+@depict.app.route('/api/v1/translate', methods = ["POST"])
 def get_translate():
-    # if flask.request.method == 'POST':
-    #     if 'word' in flask.request.form and 'lang' in flask.request.form:
-    #         text = flask.request.form['word']
-    #         target = flask.request.form['lang']
+    if flask.request.method == 'POST':
+        if 'word' in flask.request.form and 'lang' in flask.request.form:
+            text = flask.request.form['word']
+            target = flask.request.form['lang']
 
-    #         translate_client = translate.Client()
-    #         if isinstance(text, six.binary_type):
-    #             text = text.decode('utf-8')
+            translate_client = translate.Client()
+            if isinstance(text, six.binary_type):
+                text = text.decode('utf-8')
 
-    #         result = translate_client.translate(
-    #             text, target_language=target)
-    text = "hello"
-    target = "es"
-
-    translate_client = translate.Client()
-    if isinstance(text, six.binary_type):
-        text = text.decode('utf-8')
-
-    result = translate_client.translate(
-        text, target_language=target)
+            result = translate_client.translate(
+                text, target_language=target)
     
-    print(result)
     return flask.jsonify()
 
 def compute_filename(filename):
