@@ -9,48 +9,18 @@ import os
 
 @depict.app.route('/api/v1/vision', methods=['POST'])
 def depictapi():    
-    # if flask.request.method == "POST":
-
-        # recieved = dict()
-        # if 'file' not in request.files:
-        #     return flask.jsonify(), 403
-        # file = request.file['file']
-        # if not file or not allowed_file(file.file_name):
-        #     return flask.jsonify(), 403
-        # with open(file.file_name, 'rb') as image:
-        #     encoded_image = base64.b64encode(image.read())
-        # filename = secure_filename(file.file_name)
-        # file.save(os.path.join(depict.config['UPLOAD_FOLDER']), filename)
-        # res = requests.post("https://vision.googleapis.com/v1/images:annotate", encoded_image)
-
-        # return flask.jsonify(res)
-    # else:
-        # return flask.jsonify()
     if flask.request.method == "POST":
-        print(flask.request.files)
-        # if 'file' not in flask.request.files:
-        #     return flask.jsonify(), 403
         upload = flask.request.files['file']
         file_name = compute_filename(upload)
-        # if not allowed_file(upload):
-        #     return flask.jsonify(), 403
-            
-        # dummy, file_name = tempfile.mkstemp()
-        # upload.save(file_name)
-
         vision_client = vision.ImageAnnotatorClient()
-        # if allowed_file(upload.filename):
-        # filename = flask.secure_filename(upload.filename)
-        # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            
-
-
         with open(file_name, 'rb') as image_file:
             content = image_file.read()
-            image = vision_client.image(content = content)
-        labels = image.detect_labels()
-        print(labels)
-        return flask.jsonify(**labels)
+        image = vision.types.Image(content = content)
+        response = vision_client.label_detection(image = image)
+        labels = response.label_annotations
+        context_list = [label.description for label in labels]
+        context = {"words":context_list}
+        return flask.jsonify(**context)
 
 @depict.app.route('/api/v1/translate', methods = ["GET"])
 def get_translate():

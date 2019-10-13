@@ -16,15 +16,12 @@ class Upload extends React.Component {
         })
         let formData = new FormData();
         formData.append("file", event.target.files[0]);
-        console.log(event.target.files[0]);
-        console.log(formData);
         fetch(this.props.url, { credentials: 'same-origin', method: 'POST', body: formData })
-        .then((response) => { console.log(response); response.json() })
-        .then((data) => {
-            console.log(data);
+        .then(response =>  response.json())
+        .then(response => {
+            console.log(response);
             this.setState({
-                upload: URL.createObjectURL(event.target.files[0]),
-                words: data.label
+               words: response.words
             })
         })
     }
@@ -40,6 +37,7 @@ class Upload extends React.Component {
             <div>
                 <input type="file" onChange={this.handleChange}/>
                 <img src={this.state.upload}/>
+                <p>{this.state.words}</p>
             </div>
         );
     }
