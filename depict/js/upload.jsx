@@ -34,7 +34,7 @@ class Upload extends React.Component {
     */
     render() {
         return (
-            <div>
+            <div id="upload">
                 <input type="file" onChange={this.handleChange}/>
                 <img src={this.state.upload}/>
                 <p>{this.state.words}</p>

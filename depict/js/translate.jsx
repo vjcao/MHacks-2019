@@ -122,37 +122,38 @@ class Translate extends React.Component {
         this.state = { english: "none", translate: "none" };
     }
 
-    componentDidMount() {
-        // Call REST API to get number of likes
-        fetch(this.props.url, { credentials: 'same-origin' })
-        .then((response) => {
-            if (!response.ok) throw Error(response.statusText);
-            return response.json();
-        })
-        .then((data) => {
-            this.setState({
-                english: "original",
-                translate: "new word"
-            });
-        })
-        .catch(error => console.log(error));
-    }
+    // componentDidMount() {
+    //     // Call REST API to get number of likes
+    //     fetch(this.props.url, { credentials: 'same-origin' })
+    //     .then((response) => {
+    //         if (!response.ok) throw Error(response.statusText);
+    //         return response.json();
+    //     })
+    //     .then((data) => {
+    //         this.setState({
+    //             english: "original",
+    //             translate: "new word"
+    //         });
+    //     })
+    //     .catch(error => console.log(error));
+    // }
 
 
     
     render() {
         // Render number of likes
         return (
-            <div className="translate">
+            <div id="translate">
                 <p>{ this.state.english }</p>
                 <p>{ this.state.translate }</p>
-                {/* <FormControl>
+                <FormControl>
                     <Select>
                     {
                         languages.map((el,i) => (<MenuItem key={i} value={el.code}>{el.label}</MenuItem>))
                     }
                     </Select>
-                </FormControl> */}
+                </FormControl>
+                <input type="submit" onClick={this.handleSubmit()}>Translate</input>
             </div>
         );
     }
