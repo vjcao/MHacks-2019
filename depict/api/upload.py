@@ -1,7 +1,7 @@
 import flask
 import depict
 import base64
-from google.cloud import vision
+from google.cloud import vision, translate
 import io
 
 @depict.app.route('/api/v1/vision', methods=['GET', 'POST'])

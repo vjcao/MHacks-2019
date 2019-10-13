@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Checkbox from '@material-ui/core/Checkbox'
-import FormControl from '@material-ui/core/FormControl'
-import FormGroup from '@material-ui/core/FormGroup'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import Select from '@material-ui/core/Select'
-import MenuItem from '@material-ui/core/MenuItem'
+// import Checkbox from '@material-ui/core/Checkbox'
+// import FormControl from '@material-ui/core/FormControl'
+// import FormGroup from '@material-ui/core/FormGroup'
+// import FormControlLabel from '@material-ui/core/FormControlLabel'
+// import Select from '@material-ui/core/Select'
+// import MenuItem from '@material-ui/core/MenuItem'
 
 const languages = [
     {label: 'Afrikaans', code: 'af'},
@@ -146,13 +146,13 @@ class Translate extends React.Component {
             <div className="translate">
                 <p>{ this.state.english }</p>
                 <p>{ this.state.translate }</p>
-                <FormControl>
+                {/* <FormControl>
                     <Select>
                     {
                         languages.map((el,i) => (<MenuItem key={i} value={el.code}>{el.label}</MenuItem>))
                     }
                     </Select>
-                </FormControl>
+                </FormControl> */}
             </div>
         );
     }
