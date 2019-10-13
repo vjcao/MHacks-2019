@@ -166,7 +166,7 @@ class Translate extends React.Component {
                         languages.map((el,i) => (<option key={i} value={el.code}>{el.label}</option>))
                     }
                 </select>
-                <input type="submit" onClick={this.handleSubmit()}/>
+                <input type="submit" onClick={this.handleSubmit}/>
             </div>
         );
     }
