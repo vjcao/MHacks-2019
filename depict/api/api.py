@@ -35,7 +35,6 @@ def get_translate():
 
             result = translate_client.translate(
                 text, target_language=target)
-    print(result)
     context = {"word": result['translatedText']}
     return flask.jsonify(**context)
 
