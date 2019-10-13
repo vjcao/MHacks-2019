@@ -28,7 +28,7 @@ class Upload extends React.Component {
                words: response.words
             })
         })
-        .error(error => console.log(error))
+        .catch(error => console.log(error))
     }
     /*
     function selectWords() {
