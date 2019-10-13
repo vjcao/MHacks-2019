@@ -10,8 +10,14 @@
 }
 
 #upload-stuff img {
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 600px;
+  max-width: 600px;
+}
+
+#logo {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-bottom: 20px;
 }
 
 #logo img {
