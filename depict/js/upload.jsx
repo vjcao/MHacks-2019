@@ -45,10 +45,9 @@ class Upload extends React.Component {
             <div id="right-bar">
               <div id="button-bar">
                 <input type="file" onChange={this.handleChange}/>
-                <label>Upload</label>
               </div>
               <div id="word-list">
-                <p>{this.state.words}</p>
+                {this.state.words.map((el) => (<label for={el}><input type="radio" value={el}/>{el}</label>))}
               </div>
             </div>
           </div>
