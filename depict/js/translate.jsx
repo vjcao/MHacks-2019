@@ -120,6 +120,8 @@ class Translate extends React.Component {
         // Initialize mutable state
         super(props);
         this.state = { english: "none", lang: "Afrikaans", translated: "none"};
+        this.handleLang = this.handleLang.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     // componentDidMount() {
