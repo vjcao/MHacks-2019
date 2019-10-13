@@ -6,7 +6,6 @@ import Translate from './translate'
 
 class App extends React.Component {
     constructor(props) {
-        // Initialize mutable state
         super(props);
     }
 
