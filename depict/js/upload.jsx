@@ -6,7 +6,7 @@ class Upload extends React.Component {
     constructor(props) {
         // Initialize mutable state
         super(props);
-        this.state = { upload: "nopic", words: [] };
+        this.state = { upload: "/static/uploads/default.jpg", words: [] };
         this.handleChange = this.handleChange.bind(this)
     }
     handleChange(event) {
@@ -41,7 +41,7 @@ class Upload extends React.Component {
         return (
           <div id="upload-container">
             <div id="upload-stuff">
-                <img src={this.state.upload} onerror="this.style.display='none'"/>
+                <img src={this.state.upload}/>
                 <input type="file" onChange={this.handleChange}/>
             </div>
             <div id="wordlist">
