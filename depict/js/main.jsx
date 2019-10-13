@@ -13,6 +13,9 @@ class App extends React.Component {
 
     render() {
         return (
+            <div id="logo">
+              <img src="/static/uploads/logo.png" />
+            </div>
             <div id="app">
                 <Upload url='/api/v1/vision'/>
                 <Translate url='/api/v1/translate'/>
