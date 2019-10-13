@@ -161,7 +161,7 @@ class Translate extends React.Component {
                 <p>{ this.state.english }</p>
                 <p>{ this.state.lang }</p>
                 <p>{ this.state.translated }</p>
-                <select id='language' onChange={this.handleLang()}>
+                <select id='language' onChange={this.handleLang}>
                     {
                         languages.map((el,i) => (<option key={i} value={el.code}>{el.label}</option>))
                     }
