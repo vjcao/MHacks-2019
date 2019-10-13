@@ -63,6 +63,8 @@ body {
   text-align: center;
 }
 
+/* reference to below code: https://www.viralpatel.net/css-radio-button-checkbox-background/ */
+
 #hide input[type=file] {
     display:none;
     margin:10px;
