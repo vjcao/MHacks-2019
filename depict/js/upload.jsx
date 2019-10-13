@@ -41,10 +41,15 @@ class Upload extends React.Component {
           <div id="upload-container">
             <div id="upload-stuff">
                 <img src={this.state.upload}/>
-                <input type="file" onChange={this.handleChange}/> <label>Upload</label>
             </div>
-            <div id="wordlist">
+            <div id="right-bar">
+              <div id="button-bar">
+                <input type="file" onChange={this.handleChange}/>
+                <label>Upload</label>
+              </div>
+              <div id="word-list">
                 <p>{this.state.words}</p>
+              </div>
             </div>
           </div>
         );
