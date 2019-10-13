@@ -62,7 +62,7 @@ body {
 #hide input[type=file]:active + label {
     background-image: none;
     background-color:#2D6C7A;
-    color:#EEEEEE;
+    color:#DDDDDD;
 }
 
 input[type=radio] + label {
