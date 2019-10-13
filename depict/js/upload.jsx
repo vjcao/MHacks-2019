@@ -48,7 +48,7 @@ class Upload extends React.Component {
                 <input type="file" onChange={this.handleChange}/>
               </div>
               <div id="word-list" onChange={Translate.handleWord}>
-                {this.state.words.map((el) => (<label for={el}><input type="radio" value={el}/>{el}</label>))}
+                {this.state.words.map((el) => (<label for={el}><input type="radio" key={el} name="word" value={el}/>{el}</label>))}
               </div>
             </div>
           </div>
