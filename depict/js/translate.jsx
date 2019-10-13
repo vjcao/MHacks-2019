@@ -119,7 +119,7 @@ class Translate extends React.Component {
     constructor(props) {
         // Initialize mutable state
         super(props);
-        this.state = { english: "none", translate: "none" };
+        this.state = { english: "none", lang: "none", translated: "none"};
     }
 
     // componentDidMount() {
@@ -138,22 +138,35 @@ class Translate extends React.Component {
     //     .catch(error => console.log(error));
     // }
 
-
+    handleLang(event) {
+        this.setState({lang: event.target.value})
+    }
+    handleSubmit() {
+        this.setState({english: "hello"})
+        let formData = new FormData()
+        formData.append("word", this.state.english)
+        formData.append("lang", this.state.lang)
+        fetch(this.props.url, { credentials: 'same-origin', method: 'POST', body: formData })
+        .then(response => response.json())
+        .then(response => {
+            console.log(response)
+            this.setState({translated: response.word})
+        })
+    }
     
     render() {
         // Render number of likes
         return (
             <div id="translate">
                 <p>{ this.state.english }</p>
-                <p>{ this.state.translate }</p>
-                <FormControl>
-                    <Select>
+                <p>{ this.state.lang }</p>
+                <p>{ this.state.translated }</p>
+                <select id='language' onChange={this.handleLang()}>
                     {
-                        languages.map((el,i) => (<MenuItem key={i} value={el.code}>{el.label}</MenuItem>))
+                        languages.map((el,i) => (<option key={i} value={el.code}>{el.label}</option>))
                     }
-                    </Select>
-                </FormControl>
-                <input type="submit" onClick={this.handleSubmit()}>Translate</input>
+                </select>
+                <input type="submit" onClick={this.handleSubmit()}/>
             </div>
         );
     }
