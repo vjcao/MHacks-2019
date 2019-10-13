@@ -112,29 +112,12 @@ const languages = [
 
 class Translate extends React.Component {
     constructor(props) {
-        // Initialize mutable state
         super(props);
         this.state = { english: "none", lang: "Afrikaans", translated: "none"};
         this.handleLang = this.handleLang.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleWord = this.handleWord.bind(this)
     }
-
-    // componentDidMount() {
-    //     // Call REST API to get number of likes
-    //     fetch(this.props.url, { credentials: 'same-origin' })
-        // .then((response) => {
-        //     if (!response.ok) throw Error(response.statusText);
-        //     return response.json();
-        // })
-    //     .then((data) => {
-    //         this.setState({
-    //             english: "original",
-    //             translate: "new word"
-    //         });
-    //     })
-    //     .catch(error => console.log(error));
-    // }
 
     handleLang(event) {
         console.log(event.target.value)
@@ -161,9 +144,8 @@ class Translate extends React.Component {
         })
         .catch(error => console.log(error))
     }
-    
+
     render() {
-        // Render number of likes
         return (
             <div>
             <Upload url="/api/v1/vision" handleWord={this.handleWord}/>
@@ -188,5 +170,5 @@ class Translate extends React.Component {
 Translate.propTypes = {
     url: PropTypes.string.isRequired,
 };
-  
+
 export default Translate;

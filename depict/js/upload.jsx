@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 class Upload extends React.Component {
 
     constructor(props) {
-        // Initialize mutable state
         super(props);
         this.state = { upload: "/static/uploads/default.jpg", words: [] };
         this.handleChange = this.handleChange.bind(this)
     }
+
     handleChange(event) {
         this.setState({
             upload: URL.createObjectURL(event.target.files[0]),
@@ -29,13 +29,7 @@ class Upload extends React.Component {
         })
         .catch(error => console.log(error))
     }
-    /*
-    function selectWords() {
-        return (
-         this.state.words.map()
-        )
-    }
-    */
+
     render() {
         return (
           <div id="upload-container">
